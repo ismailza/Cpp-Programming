@@ -167,3 +167,23 @@ void Matrice::operator=(const Matrice &M)
   }
 }
 
+Matrice Matrice::operator^(int n)
+{
+  if (this->n != this->m)
+    return Matrice(this->n, this->m);
+  if (!n)
+    return Matrice(this->n);
+  if (n == 1)
+    return *this;
+  return *this * *this^(n - 1);
+}
+
+Matrice Matrice::pow(int n)
+{
+  if (this->n != this->m)
+    return Matrice(this->n, this->m);
+  Matrice result(this->n);
+  for (int i = 0; i < n; i++)
+    result = result * *this;
+  return result;
+}

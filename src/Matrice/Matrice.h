@@ -23,6 +23,8 @@ class Matrice
     Matrice operator*(const Matrice &);
     Matrice operator*(const int &);
     void operator=(const Matrice &);
+    Matrice operator^(int);
+    Matrice pow(int);
 };
 
 #endif

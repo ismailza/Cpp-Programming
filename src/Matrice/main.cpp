@@ -37,5 +37,11 @@ int main()
   matrice7 = matrice1;
   matrice7.print();
 
+  cout << "Matrice 7 ^ 2: (Recursivite)" << endl;
+  (matrice7 ^ 2).print();
+
+  cout << "Matrice 7 ^ 2: (Lineaire)" << endl;
+  matrice7.pow(2).print();
+
   return 0;
 }
