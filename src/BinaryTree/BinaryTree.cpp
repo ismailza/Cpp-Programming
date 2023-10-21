@@ -11,7 +11,7 @@ BinaryTree::BinaryTree()
 
 BinaryTree::~BinaryTree()
 {
-  delete this->root;
+  this->destroyTree(this->root);
 }
 
 Node *BinaryTree::getRoot()
@@ -152,4 +152,14 @@ int BinaryTree::remove(Node *node, int data)
       return this->remove(node->getRight(), data);
   }
   return 0;
+}
+
+void BinaryTree::destroyTree(Node *node)
+{
+  if (node)
+  {
+    this->destroyTree(node->getLeft());
+    this->destroyTree(node->getRight());
+    delete node;
+  }
 }

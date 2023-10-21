@@ -12,6 +12,7 @@ class BinaryTree
     void printPreOrder(Node *);
     void printPostOrder(Node *);
     int remove(Node *, int);
+    void destroyTree(Node *);
   public:
     BinaryTree();
     ~BinaryTree();
