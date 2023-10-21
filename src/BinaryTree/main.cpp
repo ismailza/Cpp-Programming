@@ -14,7 +14,12 @@ int main()
   tree.insert(4);
   tree.insert(6);
   tree.insert(8);
+  cout << "In order: ";
   tree.printInOrder();
+  cout << "Pre order: ";
+  tree.printPreOrder();
+  cout << "Post order: ";
+  tree.printPostOrder();
 
   return 0;
 }

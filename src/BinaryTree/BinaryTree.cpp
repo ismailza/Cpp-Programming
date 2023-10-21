@@ -67,3 +67,39 @@ void BinaryTree::printInOrder(Node *node)
   if (node->getRight())
     this->printInOrder(node->getRight());
 }
+
+void BinaryTree::printPreOrder()
+{
+  if (!this->root)
+    cout << "Empty tree";
+  else
+    this->printPreOrder(this->root);
+  cout << endl;
+}
+
+void BinaryTree::printPreOrder(Node *node)
+{
+  cout << node->getData() << " ";
+  if (node->getLeft())
+    this->printPreOrder(node->getLeft());
+  if (node->getRight())
+    this->printPreOrder(node->getRight());
+}
+
+void BinaryTree::printPostOrder()
+{
+  if (!this->root)
+    cout << "Empty tree";
+  else
+    this->printPostOrder(this->root);
+  cout << endl;
+}
+
+void BinaryTree::printPostOrder(Node *node)
+{
+  if (node->getLeft())
+    this->printPostOrder(node->getLeft());
+  if (node->getRight())
+    this->printPostOrder(node->getRight());
+  cout << node->getData() << " ";
+}

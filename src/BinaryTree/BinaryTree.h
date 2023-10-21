@@ -22,7 +22,6 @@ class BinaryTree
     void printPreOrder();
     void printPostOrder();
     void remove(int);
-
 };
 
 #endif
