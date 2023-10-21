@@ -103,3 +103,53 @@ void BinaryTree::printPostOrder(Node *node)
     this->printPostOrder(node->getRight());
   cout << node->getData() << " ";
 }
+
+void BinaryTree::remove(int data)
+{
+  if (!this->root)
+    cout << "Empty tree" << endl;
+  else if (this->remove(this->root, data))
+    cout << "Removed " << data << endl;
+  else
+    cout << "Could not find " << data << endl;
+}
+
+int BinaryTree::remove(Node *node, int data)
+{
+  if (node->getData() == data)
+  {
+    Node *temp = node;
+    if (!node->getLeft())
+      node = node->getRight();
+    else if (!node->getRight())
+      node = node->getLeft();
+    else
+    {
+      Node *parent = node;
+      temp = node->getLeft();
+      while (temp->getRight())
+      {
+        parent = temp;
+        temp = temp->getRight();
+      }
+      node->setData(temp->getData());
+      if (parent == node)
+        parent->setLeft(temp->getLeft());
+      else
+        parent->setRight(temp->getLeft());
+    }
+    delete temp;
+    return 1;
+  }
+  else if (data < node->getData())
+  {
+    if (node->getLeft())
+      return this->remove(node->getLeft(), data);
+  }
+  else
+  {
+    if (node->getRight())
+      return this->remove(node->getRight(), data);
+  }
+  return 0;
+}

@@ -20,6 +20,9 @@ int main()
   tree.printPreOrder();
   cout << "Post order: ";
   tree.printPostOrder();
+  tree.remove(5);
+  cout << "In order: ";
+  tree.printInOrder();
 
   return 0;
 }
