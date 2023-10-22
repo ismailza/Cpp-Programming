@@ -20,9 +20,13 @@ int main()
   tree.printPreOrder();
   cout << "Post order: ";
   tree.printPostOrder();
+  cout << "Display horizontal: " << endl;
+  tree.displayHorizontal();
   tree.remove(5);
   cout << "In order: ";
   tree.printInOrder();
+  cout << "Display horizontal: " << endl;
+  tree.displayHorizontal();
 
   return 0;
 }

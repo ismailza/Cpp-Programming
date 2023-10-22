@@ -163,3 +163,23 @@ void BinaryTree::destroyTree(Node *node)
     delete node;
   }
 }
+
+void BinaryTree::displayHorizontal()
+{
+  if (!this->root)
+    cout << "Empty tree" << endl;
+  else
+    this->displayHorizontal(this->root, 0);
+}
+
+void BinaryTree::displayHorizontal(Node *node, int level)
+{
+  if (node)
+  {
+    this->displayHorizontal(node->getRight(), level + 1);
+    for (int i = 0; i < level; i++)
+      cout << "\t";
+    cout << node->getData() << endl;
+    this->displayHorizontal(node->getLeft(), level + 1);
+  }
+}

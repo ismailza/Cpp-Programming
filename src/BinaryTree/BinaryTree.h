@@ -13,6 +13,7 @@ class BinaryTree
     void printPostOrder(Node *);
     int remove(Node *, int);
     void destroyTree(Node *);
+    void displayHorizontal(Node *, int);
   public:
     BinaryTree();
     ~BinaryTree();
@@ -23,6 +24,7 @@ class BinaryTree
     void printPreOrder();
     void printPostOrder();
     void remove(int);
+    void displayHorizontal();
 };
 
 #endif
