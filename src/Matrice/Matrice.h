@@ -4,7 +4,7 @@
 class Matrice
 {
   private:
-    int **matrice;
+    double **matrice;
     int n;
     int m;
   public:
@@ -13,7 +13,7 @@ class Matrice
     Matrice(const Matrice &);
     ~Matrice();
     void saisie();
-    void set(int, int, int);
+    void set(int, int, double);
     int get(int, int);
     void print();
     int getN();
@@ -21,7 +21,7 @@ class Matrice
     Matrice operator+(const Matrice &);
     Matrice operator-(const Matrice &);
     Matrice operator*(const Matrice &);
-    Matrice operator*(const int &);
+    Matrice operator*(const double &);
     void operator=(const Matrice &);
     Matrice operator^(int);
     Matrice pow(int);

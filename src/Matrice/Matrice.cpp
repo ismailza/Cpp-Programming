@@ -7,10 +7,10 @@ using namespace std;
 Matrice::Matrice(int n = 0)
 {
   this->n = this->m = n;
-  this->matrice = new int *[n];
+  this->matrice = new double *[n];
   for (int i = 0; i < n; i++)
   {
-    this->matrice[i] = new int[n];
+    this->matrice[i] = new double[n];
     for (int j = 0; j < n; j++)
     {
       if (i == j)
@@ -25,10 +25,10 @@ Matrice::Matrice(int n, int m)
 {
   this->n = n;
   this->m = m;
-  this->matrice = new int *[n];
+  this->matrice = new double *[n];
   for (int i = 0; i < n; i++)
   {  
-    this->matrice[i] = new int[m];
+    this->matrice[i] = new double[m];
     for (int j = 0; j < m; j++)
       this->matrice[i][j] = 0;
   }
@@ -38,10 +38,10 @@ Matrice::Matrice(const Matrice &M)
 {
   this->n = M.n;
   this->m = M.m;
-  this->matrice = new int *[this->n];
+  this->matrice = new double *[this->n];
   for (int i = 0; i < this->n; i++)
   {
-    this->matrice[i] = new int[this->m];
+    this->matrice[i] = new double[this->m];
     for (int j = 0; j < this->m; j++)
       this->matrice[i][j] = M.matrice[i][j];
   }
@@ -64,7 +64,7 @@ void Matrice::saisie()
     }
 }
 
-void Matrice::set(int i, int j, int value)
+void Matrice::set(int i, int j, double value)
 {
   if ((0 <= i ) && (i < this->n) && (0 <= j) && (j < this->m))
     this->matrice[i][j] = value;
@@ -141,7 +141,7 @@ Matrice Matrice::operator*(const Matrice &M)
   return result;
 }
 
-Matrice Matrice::operator*(const int &value)
+Matrice Matrice::operator*(const double &value)
 {
   Matrice result(this->n, this->m);
   for (int i = 0; i < this->n; i++)
@@ -158,10 +158,10 @@ void Matrice::operator=(const Matrice &M)
   
   this->n = M.n;
   this->m = M.m;
-  this->matrice = new int *[this->n];
+  this->matrice = new double *[this->n];
   for (int i = 0; i < this->n; i++)
   {
-    this->matrice[i] = new int[this->m];
+    this->matrice[i] = new double[this->m];
     for (int j = 0; j < this->m; j++)
       this->matrice[i][j] = M.matrice[i][j];
   }
