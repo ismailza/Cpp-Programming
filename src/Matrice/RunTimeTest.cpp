@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-  Matrice M(300, 300);
+  Matrice M(1000, 1000);
 
   // M.print();
   auto start = chrono::high_resolution_clock::now();
