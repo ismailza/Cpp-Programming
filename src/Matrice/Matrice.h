@@ -25,6 +25,7 @@ class Matrice
     void operator=(const Matrice &);
     Matrice operator^(int);
     Matrice pow(int);
+    Matrice pow2(int);
 };
 
 #endif
