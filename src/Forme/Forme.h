@@ -8,7 +8,7 @@ class Forme
     float y;
 
   public:
-    Forme(float, float);
+    Forme(float x = 0, float y = 0);
     virtual void afficher() = 0;
     virtual double surface() = 0;
 };

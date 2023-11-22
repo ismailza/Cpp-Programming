@@ -1,0 +1,3 @@
+D:/Cpp-Programming/src/Forme/cmake-build-debug/CMakeFiles/Forme.dir
+D:/Cpp-Programming/src/Forme/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Cpp-Programming/src/Forme/cmake-build-debug/CMakeFiles/rebuild_cache.dir

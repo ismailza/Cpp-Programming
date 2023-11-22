@@ -1,16 +1,16 @@
 #ifndef CARRE_H
 #define CARRE_H
 
-#include "Forme2D.cpp"
+#include "Forme2D.h"
 
 class Carre : public Forme2D
 {
-  private:
+  protected:
     float cote;
 
   public:
-    Carre(float cote);
-    Carre(float x, float y, float cote);
+    Carre(float);
+    Carre(float, float, float);
     void afficher();
     double surface();
 };
