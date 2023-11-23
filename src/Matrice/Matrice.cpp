@@ -192,6 +192,6 @@ Matrice Matrice::pow2(int n)
 {
   if (this->n != this->m)
     exit(1);
-  Matrice M = this->pow((int)(n / 2));
+  Matrice M = this->pow((int)(n / 2)).pow(2);
   return (n % 2 ? M * *this : M);
 }
