@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Matrice.hpp"
+#include "Matrice.h"
 
 using namespace std;
 

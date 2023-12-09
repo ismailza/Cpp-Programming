@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Chaine.hpp"
+#include "Chaine.h"
 
 using namespace std;
 
