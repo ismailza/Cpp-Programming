@@ -29,6 +29,11 @@ template <class T> Stack<T>::~Stack()
     this->pop();
 }
 
+template <class T> bool Stack<T>::isEmpty()
+{
+  return !this->top;
+}
+
 template <class T> T Stack<T>::peek()
 {
   return this->top->getData();

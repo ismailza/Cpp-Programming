@@ -29,6 +29,11 @@ Stack::~Stack()
     this->pop();
 }
 
+bool Stack::isEmpty()
+{
+  return !this->top;
+}
+
 int Stack::peek()
 {
   return this->top->getData();

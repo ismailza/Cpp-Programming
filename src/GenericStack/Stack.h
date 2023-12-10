@@ -13,6 +13,7 @@ class Stack
     Stack();
     Stack(const Stack<T> &);
     ~Stack();
+    bool isEmpty();
     T peek();
     void push(T);
     T pop();
