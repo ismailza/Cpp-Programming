@@ -1,5 +1,5 @@
-#ifndef CHAINES_HPP
-#define CHAINES_HPP
+#ifndef CHAINES_H
+#define CHAINES_H
 
 class Chaine
 {

@@ -1,5 +1,5 @@
-#ifndef LISTE_HPP
-#define LISTE_HPP
+#ifndef LISTE_H
+#define LISTE_H
 
 struct Noeud {
   int donnee;

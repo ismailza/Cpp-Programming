@@ -1,5 +1,5 @@
-#ifndef MATRCIE_HPP
-#define MATRICE_HPP
+#ifndef MATRCIE_H
+#define MATRICE_H
 
 class Matrice
 {
