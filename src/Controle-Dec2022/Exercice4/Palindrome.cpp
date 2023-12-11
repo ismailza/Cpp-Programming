@@ -13,10 +13,11 @@ using namespace std;
 bool palindrome(const string str)
 {
   Stack<char> stack;
-  for (char c : str)
-    stack.push(c);
-  int n = str.length() / 2;
+  int lenght = str.length();
+  int n = lenght / 2;
   for (int i = 0; i < n; i++)
+    stack.push(str[i]);
+  for (int i = n + 1; i < lenght; i++)
     if (stack.pop() != str[i])
       return false;
   return true;
