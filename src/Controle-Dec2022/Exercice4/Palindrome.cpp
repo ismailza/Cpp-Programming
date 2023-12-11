@@ -15,12 +15,10 @@ bool palindrome(const string str)
   Stack<char> stack;
   for (char c : str)
     stack.push(c);
-  int i = 0;
-  while (!stack.isEmpty())
-  {
-    if (stack.pop() != str[i++])
+  int n = str.length() / 2;
+  for (int i = 0; i < n; i++)
+    if (stack.pop() != str[i])
       return false;
-  }
   return true;
 }
 
