@@ -102,9 +102,10 @@ float Triangle::perimetre()
   return this->cote1() + this->cote2() + this->cote3();
 }
 
-void Triangle::operator=(const Triangle &T)
+Triangle &Triangle::operator=(const Triangle &T)
 {
   this->sommets[0] = T.sommets[0];
   this->sommets[1] = T.sommets[1];
   this->sommets[2] = T.sommets[2];
+  return *this;
 }

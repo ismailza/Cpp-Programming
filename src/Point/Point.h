@@ -21,7 +21,7 @@ class Point
     void echelle(float, float);
     float distance(Point);
     Point operator+(const Point &);
-    void operator=(const Point &);
+    Point &operator=(const Point &);
 };
 
 #endif

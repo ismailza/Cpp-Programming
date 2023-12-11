@@ -16,7 +16,7 @@ class Circle : public Point
     float getArea();
     float getPerimeter();
     void print();
-    void operator=(const Circle &);
+    Circle &operator=(const Circle &);
 };
 
 #endif // CIRCLE_H

@@ -22,7 +22,7 @@ class Matrice
     Matrice operator-(const Matrice &);
     Matrice operator*(const Matrice &);
     Matrice operator*(const double &);
-    void operator=(const Matrice &);
+    Matrice &operator=(const Matrice &);
     Matrice operator^(int);
     Matrice pow(int);
     Matrice pow2(int);

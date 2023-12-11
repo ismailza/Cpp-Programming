@@ -47,11 +47,12 @@ Vecteur3D Vecteur3D::operator/(const double x)
   return Vecteur3D (this->i / x, this->j / x, this->k / x);
 }
 
-void Vecteur3D::operator=(const Vecteur3D &v)
+Vecteur3D &Vecteur3D::operator=(const Vecteur3D &v)
 {
   this->i = v.i;
   this->j = v.j;
   this->k = v.k;
+  return *this;
 }
 
 double Vecteur3D::scalaire(const Vecteur3D &v)

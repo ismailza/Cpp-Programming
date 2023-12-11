@@ -81,8 +81,9 @@ Point Point::operator+(const Point &X)
   return P;
 }
 
-void Point::operator=(const Point &X)
+Point &Point::operator=(const Point &X)
 {
   this->x = X.x;
   this->y = X.y;
+  return *this;
 }

@@ -112,7 +112,7 @@ int Stack::size()
   return size;
 }
 
-void Stack::operator=(const Stack &S)
+Stack &Stack::operator=(const Stack &S)
 {
   while (this->top)
     this->pop();
@@ -126,6 +126,7 @@ void Stack::operator=(const Stack &S)
   while (tmp->top)
     this->push(tmp->pop());
   delete tmp;
+  return *this;
 }
 
 Stack Stack::operator+(const Stack &S)

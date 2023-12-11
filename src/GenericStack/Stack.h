@@ -19,7 +19,7 @@ class Stack
     T pop();
     void print();
     int size();
-    void operator=(const Stack<T> &);
+    Stack<T> &operator=(const Stack<T> &);
     Stack<T> operator+(const Stack<T> &);
     void operator+(T);
 };

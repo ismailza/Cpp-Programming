@@ -16,7 +16,7 @@ class Stack
     int pop();
     void print();
     int size();
-    void operator=(const Stack &);
+    Stack &operator=(const Stack &);
     Stack operator+(const Stack &);
     void operator+(int);
 };

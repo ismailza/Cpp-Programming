@@ -45,8 +45,9 @@ void Circle::print()
   cout << "Circle: (" << this->getX() << ", " << this->getY() << ") r = " << this->radius << endl;
 }
 
-void Circle::operator=(const Circle &c)
+Circle &Circle::operator=(const Circle &c)
 {
   Point::operator=(c);
   this->radius = c.radius;
+  return *this;
 }

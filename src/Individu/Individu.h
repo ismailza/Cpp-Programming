@@ -17,7 +17,7 @@ class Individu
     string prenom(void);
     int age(void);
     void affiche(void);
-    void operator=(const Individu &);
+    Individu &operator=(const Individu &);
 };
 
 #endif

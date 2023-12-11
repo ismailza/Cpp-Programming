@@ -112,7 +112,7 @@ template <class T> int Stack<T>::size()
   return size;
 }
 
-template <class T> void Stack<T>::operator=(const Stack<T> &S)
+template <class T> Stack<T> &Stack<T>::operator=(const Stack<T> &S)
 {
   while (this->top)
     this->pop();
@@ -126,6 +126,7 @@ template <class T> void Stack<T>::operator=(const Stack<T> &S)
   while (tmp->top)
     this->push(tmp->pop());
   delete tmp;
+  return *this;
 }
 
 template <class T> Stack<T> Stack<T>::operator+(const Stack<T> &S)

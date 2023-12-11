@@ -150,7 +150,7 @@ Matrice Matrice::operator*(const double &value)
   return result;
 }
 
-void Matrice::operator=(const Matrice &M)
+Matrice &Matrice::operator=(const Matrice &M)
 {
   for (int i = 0; i < this->n; i++)
     delete[] this->matrice[i];
@@ -165,6 +165,7 @@ void Matrice::operator=(const Matrice &M)
     for (int j = 0; j < this->m; j++)
       this->matrice[i][j] = M.matrice[i][j];
   }
+  return *this;
 }
 
 Matrice Matrice::operator^(int n)

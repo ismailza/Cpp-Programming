@@ -38,9 +38,10 @@ void Individu::affiche()
   cout << "Age\t: " << this->_age << endl;
 }
 
-void Individu::operator=(const Individu &individu)
+Individu &Individu::operator=(const Individu &individu)
 {
   this->_nom = individu._nom;
   this->_prenom = individu._prenom;
   this->_age = individu._age;
+  return *this;
 }

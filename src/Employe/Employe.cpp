@@ -23,8 +23,9 @@ void Employe::affiche()
   cout << "Salaire\t: " << this->_salaire << endl;
 }
 
-void Employe::operator=(const Employe &employe)
+Employe &Employe::operator=(const Employe &employe)
 {
   Individu::operator=(employe);
   this->_salaire = employe._salaire; 
+  return *this;
 }

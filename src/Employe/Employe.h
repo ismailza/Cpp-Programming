@@ -17,7 +17,7 @@ class Employe : public Individu
     Employe(const Employe &);
     double salaire(void);
     void affiche(void);
-    void operator=(const Employe &);
+    Employe &operator=(const Employe &);
 };
 
 #endif

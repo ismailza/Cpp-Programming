@@ -25,7 +25,7 @@ class Triangle
     bool isocele();
     bool equilateral();
     float perimetre();
-    void operator=(const Triangle &);
+    Triangle &operator=(const Triangle &);
 };
 
 #endif
