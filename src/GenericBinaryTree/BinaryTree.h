@@ -28,6 +28,7 @@ class BinaryTree
     void printPreOrder();
     void printPostOrder();
     void displayHorizontal();
+    void displayTreeBFS();
 };
 
 #endif
